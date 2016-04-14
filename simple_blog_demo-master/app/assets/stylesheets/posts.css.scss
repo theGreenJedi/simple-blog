@@ -1,0 +1,44 @@
+// Place all the styles related to the Posts controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.posts{
+
+  .post{
+    border: 2px solid #ccc;
+    margin: 30px 0;
+    padding: 10px;
+    h5{
+      font-style: italic;
+    }
+    p{
+      color: #666;
+    }
+    a.leave-comment{
+      text-align: right;
+      display: block;
+    }
+    h5.comments-head{
+      font-weight: bold;
+      text-decoration: underline;
+    }
+  }
+  .home-link{
+    text-align: center;
+  }
+
+  .post-form{
+    margin: 15px 0;
+  }
+  .comments{
+    margin-left: 20px;
+    margin-top: 20px;
+  }
+  .comment{
+    .comment-author{
+      font-style: italic;
+      text-align: right;
+    }
+  }
+
+}

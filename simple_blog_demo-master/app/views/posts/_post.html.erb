@@ -1,0 +1,25 @@
+<div class="row post">
+  <div class="col-sm-12">
+    <h4>
+      By <%= post.author %>
+    </h4>
+    <h5>
+      Posted on <%= post.created_at.strftime("%A %b %d, %Y") %>
+    </h5>
+    <p>
+      <%= post.content %>
+    </p>
+    <% unless post.comments.empty? %>
+      <div class="comments">
+        <h5 class="comments-head">
+          Comments:
+        </h5>
+          <%= render post.comments %>     
+      </div>
+    <% end %>
+
+    <% if @comment.nil? %>
+      <%= link_to "Leave a comment!", new_post_comment_path(post), :class => "leave-comment" %>      
+    <% end %>
+  </div>
+</div>
